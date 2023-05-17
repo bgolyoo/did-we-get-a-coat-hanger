@@ -1,5 +1,7 @@
-export default function Home() {
-  const didWeGetIt = false;
+import { get } from "@vercel/edge-config";
+
+export default async function Home() {
+  const didWeGetIt = await get("didWeGetIt");
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <div className="flex flex-col gap-y-10 font-extrabold ">
