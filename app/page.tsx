@@ -1,5 +1,7 @@
 import { get } from "@vercel/edge-config";
 
+export const runtime = "edge";
+
 export default async function Home() {
   const didWeGetIt = await get("didWeGetIt");
   return (
